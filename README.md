@@ -13,6 +13,26 @@ class MenuItem(models.Model):
 
 ```
 
+##### Create the serializers.py file to implement the serializers as connecters into the database
+
+```
+from rest_framework import serializers
+from .models import MenuItem
+
+class menuItSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    title = serializers.CharField(max_length=255)
+
+
+
+class MenuItemSerializer(serializers.ModelSerializer):
+    #The Meta class is only needed if the serializers.ModelSerializer is imported 
+    class Meta:
+        model = MenuItem
+        fields = ['id','title','price','inventory']
+
+```
+
 #### A Get Call
 ![Screenshot from 2022-12-28 11-08-39](https://user-images.githubusercontent.com/46927702/209790347-a59ef498-9b67-4c18-afd5-a7079ef6b155.png)
 
