@@ -21,5 +21,12 @@ Please Visit my repository on https://github.com/Ndhlovu1/django-crud-api-system
 ```shell
 > pipenv install djangorestframework
 ```
+```Python3
+# Go into the settings.py file and change the line below
+
+
+```
+
+
 #### Add the 'rest_framework' into the installed apps
 ![Screenshot from 2022-12-28 11-32-43](https://user-images.githubusercontent.com/46927702/209790781-7ffd91d8-e0a4-46d5-9f92-79fd74d690de.png)
