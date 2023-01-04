@@ -49,7 +49,24 @@ INSTALLED_APPS = [
 # The names of your apps must also be added into this list element
 
 ```
+#### You should also see the djangorestframework file added into your Pipfile that keeps your dependencies
 
+```file
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
+
+```
 
 #### Add the 'rest_framework' into the installed apps
 ![Screenshot from 2022-12-28 11-32-43](https://user-images.githubusercontent.com/46927702/209790781-7ffd91d8-e0a4-46d5-9f92-79fd74d690de.png)
