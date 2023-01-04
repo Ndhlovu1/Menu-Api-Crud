@@ -11,7 +11,22 @@ Please Visit my repository on https://github.com/Ndhlovu1/django-crud-api-system
 ![Screenshot from 2022-12-28 11-09-18](https://user-images.githubusercontent.com/46927702/209790355-0025b610-2db4-4716-a311-f422a07d4404.png)
 
 
-#### The Project level urls.py file
+#### The Project/urls.py file is going to inherit the App/urls.py hence add the code below into a newly created urls.py file in the app folder
+
+
+```Python3
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('menu-items', views.MenuItemsView.as_view()),
+    path('menu-items/<int:pk>', views.SingleMenuItemView.as_view()),
+    
+]
+
+
+```
+
 ![Screenshot from 2022-12-28 11-30-04](https://user-images.githubusercontent.com/46927702/209790529-ad628055-8206-46f8-9257-7858cbd85bba.png)
 
 
