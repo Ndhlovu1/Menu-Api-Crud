@@ -33,6 +33,22 @@ INSTALLED_APPS = [
 ] # The default INSTALLED_APPS LOOKS LIKE THIS LIST
 
 ```
+```Python3
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',
+    'menuApiApp',
+] 
+# Dont remove that last coma, 
+# The names of your apps must also be added into this list element
+
+```
 
 
 #### Add the 'rest_framework' into the installed apps
