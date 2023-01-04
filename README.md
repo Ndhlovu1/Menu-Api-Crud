@@ -15,7 +15,7 @@ class MenuItem(models.Model):
 
 ##### Create the serializers.py file to implement the serializers as connecters into the database
 
-```
+```Python3
 from rest_framework import serializers
 from .models import MenuItem
 
@@ -30,6 +30,21 @@ class MenuItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = MenuItem
         fields = ['id','title','price','inventory']
+
+```
+
+##### Create the necessary AppFolders/views.py file to enable the drf api's to be viewed
+
+```Python3
+from rest_framework import generics
+from .models import MenuItem
+from .serializers import    MenuItemSerializer
+
+class MenuItemsView(generics.ListCreateAPIView):
+    #Your django language database query
+    queryset = MenuItem.objects.all() #Similar to Select * FROM MenuItem;
+    serializer_class = MenuItemSerializer #Enabling that db connection
+
 
 ```
 
