@@ -3,6 +3,16 @@
 
 Please Visit my repository on https://github.com/Ndhlovu1/django-crud-api-system
 
+### To properly implement the Api's
+#### Go into the AppFolders/models.py file and add the table attributes that'll be present as forms in the Api calls
+```Python3
+class MenuItem(models.Model):
+    title = models.CharField(max_length=255)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    inventory = models.SmallIntegerField()
+
+```
+
 #### A Get Call
 ![Screenshot from 2022-12-28 11-08-39](https://user-images.githubusercontent.com/46927702/209790347-a59ef498-9b67-4c18-afd5-a7079ef6b155.png)
 
