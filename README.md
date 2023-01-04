@@ -44,20 +44,16 @@ class MenuItemsView(generics.ListCreateAPIView):
     #Your django language database query
     queryset = MenuItem.objects.all() #Similar to Select * FROM MenuItem;
     serializer_class = MenuItemSerializer #Enabling that db connection
+    
+#Viewing an Item One at a time
+class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):
 
-
+    queryset = MenuItem.objects.all()
+    serializer_class = MenuItemSerializer
+    
 ```
 
-#### A Get Call
-![Screenshot from 2022-12-28 11-08-39](https://user-images.githubusercontent.com/46927702/209790347-a59ef498-9b67-4c18-afd5-a7079ef6b155.png)
-
-
-#### An Inset/Put Call
-![Screenshot from 2022-12-28 11-09-18](https://user-images.githubusercontent.com/46927702/209790355-0025b610-2db4-4716-a311-f422a07d4404.png)
-
-
 #### The Project/urls.py file is going to inherit the App/urls.py hence add the code below into a newly created urls.py file in the app folder
-
 
 ```Python3
 from django.urls import path
@@ -68,7 +64,6 @@ urlpatterns = [
     path('menu-items/<int:pk>', views.SingleMenuItemView.as_view()),
     
 ]
-
 
 ```
 
@@ -134,3 +129,19 @@ INSTALLED_APPS = [
 
 #### Add the 'rest_framework' into the installed apps
 ![Screenshot from 2022-12-28 11-32-43](https://user-images.githubusercontent.com/46927702/209790781-7ffd91d8-e0a4-46d5-9f92-79fd74d690de.png)
+
+
+
+#### A Get Call
+![Screenshot from 2022-12-28 11-08-39](https://user-images.githubusercontent.com/46927702/209790347-a59ef498-9b67-4c18-afd5-a7079ef6b155.png)
+
+
+#### An Inset/Put Call
+![Screenshot from 2022-12-28 11-09-18](https://user-images.githubusercontent.com/46927702/209790355-0025b610-2db4-4716-a311-f422a07d4404.png)
+
+
+
+
+
+
+
