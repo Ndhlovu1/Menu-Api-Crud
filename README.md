@@ -4,7 +4,7 @@
 Please Visit my repository on https://github.com/Ndhlovu1/django-crud-api-system
 
 ### To properly implement the Api's
-#### Go into the AppFolders/models.py file and add the table attributes that'll be present as forms in the Api calls
+##### Go into the AppFolders/models.py file and add the table attributes that'll be present as forms in the Api calls
 ```Python3
 class MenuItem(models.Model):
     title = models.CharField(max_length=255)
