@@ -23,7 +23,14 @@ Please Visit my repository on https://github.com/Ndhlovu1/django-crud-api-system
 ```
 ```Python3
 # Go into the settings.py file and change the line below
-
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+] # The default INSTALLED_APPS LOOKS LIKE THIS LIST
 
 ```
 
